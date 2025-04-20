@@ -1,72 +1,59 @@
 .container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
 }
 
 .title {
-  text-align: center;
-  margin-bottom: 1rem;
   font-size: 2.5rem;
   color: #333;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .description {
-  text-align: center;
-  margin-bottom: 2rem;
   font-size: 1.2rem;
   color: #666;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.form {
-  background-color: #fff;
+.contactInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contactCard {
+  flex: 1;
+  background: #fff;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.formGroup {
-  margin-bottom: 1.5rem;
-}
-
-.formGroup label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
+.contactCard h2 {
   color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
-.formGroup input,
-.formGroup textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
+.contactCard p {
+  margin: 0.5rem 0;
+  color: #666;
 }
 
-.formGroup textarea {
-  min-height: 150px;
-  resize: vertical;
+.contactCard a {
+  color: #0070f3;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-.submitButton {
-  width: 100%;
-  padding: 1rem;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.submitButton:hover {
-  background-color: #45a049;
+.contactCard a:hover {
+  color: #0051a2;
 }
 
 @media (max-width: 768px) {
@@ -82,7 +69,11 @@
     font-size: 1rem;
   }
   
-  .form {
+  .contactInfo {
+    flex-direction: column;
+  }
+  
+  .contactCard {
     padding: 1.5rem;
   }
 } 
